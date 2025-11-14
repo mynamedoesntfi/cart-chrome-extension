@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",
+    "module": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "jsx": "react-jsx",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": false,
+    "strict": true,
+    "skipLibCheck": true,
+    "types": ["chrome"],
+    "baseUrl": "./src",
+    "paths": {},
+    "noEmit": true
+  },
+  "include": ["src"],
+  "references": []
+}

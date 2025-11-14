@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "CART",
+  "description": "Export Amazon cart data to CSV",
+  "version": "0.1.0",
+  "action": {
+    "default_popup": "public/popup.html",
+    "default_title": "CART"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.amazon.com/*",
+    "https://www.amazon.*/*/cart/*"
+  ],
+  "background": {
+    "service_worker": "src/background/index.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.amazon.com/*",
+        "https://www.amazon.*/*/cart/*"
+      ],
+      "js": [
+        "src/content/index.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
