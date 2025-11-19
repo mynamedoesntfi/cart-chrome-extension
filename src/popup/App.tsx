@@ -11,7 +11,6 @@ const App: React.FC = () => {
     <main className="popup">
       <header>
         <h1>CART</h1>
-        <p>Amazon cart exporter scaffold.</p>
       </header>
       <section className="popup__actions">
         <ExportComponent items={items} status={status} />
